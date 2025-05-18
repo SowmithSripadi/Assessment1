@@ -1,0 +1,29 @@
+/* Q8: What color will the text be? Explain in comments */
+/* The selector `#main p` has the highest specificity (ID selector) and therefore wins.
+   Any <p> inside an element with id="main" will be GREEN. */
+p {
+  color: red;
+}
+p.special {
+  color: blue;
+}
+#main p {
+  color: green;
+}
+
+/* Q9: What will happen below 600px screen? */
+/* When the viewport width is ≤ 600 px every element with class "container"
+   will be hidden. */
+@media (max-width: 600px) {
+  .container {
+    display: none;
+  }
+}
+
+/* Q10: Create a Flexbox layout with two divs side by side */
+.flex-container {
+  display: flex; /* activates Flexbox */
+}
+.flex-container > div {
+  flex: 1; /* each child takes up equal width */
+}
